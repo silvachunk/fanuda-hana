@@ -10,10 +10,9 @@ class AuthServiceProvider extends ServiceProvider
     /**
      * The policy mappings for the application.
      *
-     * @var array<class-string, class-string>
+     * @var array
      */
     protected $policies = [
-        // Example:
         // 'App\Models\Model' => 'App\Policies\ModelPolicy',
     ];
 
@@ -22,6 +21,8 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->registerPolicies();
+
+        // You can define gates or policies here if needed
     }
 }
